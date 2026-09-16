@@ -38,6 +38,10 @@ export function calcularMedia(notas) {
  * @param {number} media
  * @returns {string} "Aprovado", "Recuperação" ou "Reprovado"
  */
+export function formatarMedia(media) {
+  return media.toFixed(1).replace('.', ',');
+}
+
 export function obterSituacao(media) {
   if (media >= MEDIA_APROVACAO) {
     return 'Aprovado';
