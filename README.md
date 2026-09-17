@@ -18,6 +18,7 @@ Conventional Commits, merges, resolução de conflitos, versionamento e Pull Req
 
 | Nome | Usuário do GitHub |
 | Eduardo Perleberg Heckler | eduardosenac25 |
+| Gabriel Priebe Bonow      | gabrielpb293   |
 
 ## Sumário
 
