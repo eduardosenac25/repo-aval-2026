@@ -18,6 +18,23 @@ describe('calcularMedia', () => {
   test('lança erro quando nenhuma nota é informada', () => {
     assert.throws(() => calcularMedia([]), /Informe ao menos uma nota/);
   });
+
+  test('lança erro para nota negativa', () => {
+    assert.throws(() => calcularMedia([-1]), /Nota inválida/);
+  });
+
+  test('lança erro para nota maior que 10', () => {
+    assert.throws(() => calcularMedia([11]), /Nota inválida/);
+  });
+
+  test('lança erro para valor que não é número', () => {
+    assert.throws(() => calcularMedia(['8']), /Nota inválida/);
+  });
+
+  test('aceita as notas mínimas e máximas', () => {
+    assert.equal(calcularMedia([0]), 0);
+    assert.equal(calcularMedia([10]), 10);
+  });
 });
 
 describe('formatarMedia', () => {
